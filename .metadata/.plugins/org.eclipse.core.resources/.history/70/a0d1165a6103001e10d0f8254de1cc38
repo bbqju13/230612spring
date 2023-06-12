@@ -1,0 +1,29 @@
+package com.myweb.www.service;
+
+import javax.inject.Inject;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.stereotype.Service;
+
+import com.myweb.www.domain.UserVO;
+import com.myweb.www.repository.UserDAO;
+
+import lombok.extern.slf4j.Slf4j;
+
+@Slf4j
+@Service
+public class UserServiceImpl implements UserService {
+	private static final Logger log = LoggerFactory.getLogger(UserServiceImpl.class);
+	
+	@Inject
+	private UserDAO udao;
+
+	@Override
+	public int signUp(UserVO uvo) {
+		// TODO Auto-generated method stub
+		log.info(" >>>>> sginUp service in >>>>> : ");
+		UserVO tmpUser = udao.getUser(uvo.getId());
+		return 0;
+	}
+}

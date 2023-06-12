@@ -1,0 +1,13 @@
+package com.myweb.www.domain;
+
+public class UserVO {
+	/*
+	 * id varchar(255) not null primary key,
+pw varchar(255) not null,
+name varchar(255),
+email varchar(255),
+home varchar(255),
+age int,
+reg_date datetime default now()
+	 * */
+}
